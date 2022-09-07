@@ -154,4 +154,6 @@ const unzalgoStringUpMidDown = (textZalgo: string): string => {
 	return textZalgo;
 };
 
+const randomZalgoGeneration = (textZalgo: string): string => '';
+
 export {addZalgoToChar, addZalgoToString, unzalgoString, unzalgoStringUpMidDown, zalgoDownArray, zalgoMidArray, zalgoUpArray};

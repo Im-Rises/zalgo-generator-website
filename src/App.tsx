@@ -66,21 +66,22 @@ function App() {
 					</div>
 				</aside>
 			</div>
-			<div>
-				<section className={'App-zalgo-controller'}>
+			<div className={'App-zalgo-controller'}>
+				<h2>Zalgo height controllers</h2>
+				<div className={'controllers-wrapper'}>
 					<div>
-						<input type={'range'} ref={zalgoRangeUpRef} name={'upper-zalgo-range'} min={0} max={zalgoMaxHeight} defaultValue={zalgoHeight}/>
+						<input type={'range'} ref={zalgoRangeUpRef} name={'upper-zalgo-range'} min={0} max={zalgoMaxHeight} defaultValue={zalgoHeight} step={1}/>
 						<label htmlFor={'upper-zalgo-range'}>Upper zalgo height</label>
 					</div>
 					<div>
-						<input type={'range'} ref={zalgoRangeMidRef} name={'middle-zalgo-range'} min={0} max={zalgoMaxHeight} defaultValue={zalgoHeight}/>
+						<input type={'range'} ref={zalgoRangeMidRef} name={'middle-zalgo-range'} min={0} max={zalgoMaxHeight} defaultValue={zalgoHeight} step={1}/>
 						<label htmlFor={'middle-zalgo-range'}>Middle zalgo height</label>
 					</div>
 					<div>
-						<input type={'range'} ref={zalgoRangeDownRef} name={'down-zalgo-range'} min={0} max={zalgoMaxHeight} defaultValue={zalgoHeight}/>
+						<input type={'range'} ref={zalgoRangeDownRef} name={'down-zalgo-range'} min={0} max={zalgoMaxHeight} defaultValue={zalgoHeight} step={1}/>
 						<label htmlFor={'down-zalgo-range'}>Down zalgo height</label>
 					</div>
-				</section>
+				</div>
 			</div>
 		</div>
 	);
