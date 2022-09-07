@@ -144,4 +144,19 @@
   margin-bottom: 4%;
 }
 
+@media (max-width: 500px) {
+  .App-section-splitter {
+    height: unset;
+  }
+
+  .App-zalgo-text {
+    height: 200px;
+    width: 100px;
+  }
+
+  .App-zalgo-controller {
+    height: unset;
+  }
+}
+
 /*# sourceMappingURL=App.css.map */

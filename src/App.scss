@@ -158,18 +158,15 @@
 
 @media (max-width: 500px) {
   .App-section-splitter{
-
-  }
-
-  .App-text-area {
-
+    height: unset;
   }
 
   .App-zalgo-text {
-
+    height: 200px;
+    width: 100px;
   }
 
   .App-zalgo-controller{
-
+    height: unset;
   }
 }
