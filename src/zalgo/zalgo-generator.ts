@@ -154,6 +154,18 @@ const unzalgoStringUpMidDown = (textZalgo: string): string => {
 	return textZalgo;
 };
 
-const randomZalgoGeneration = (textZalgo: string): string => '';
+const randomZalgoGeneration = (textZalgo: string, maxHeight: number): string => {
+	textZalgo = addZalgoToString(textZalgo, getRandomInt(maxHeight), zalgoUpArray);
+	textZalgo = addZalgoToString(textZalgo, getRandomInt(maxHeight), zalgoMidArray);
+	return addZalgoToString(textZalgo, getRandomInt(maxHeight), zalgoDownArray);
+};
 
-export {addZalgoToChar, addZalgoToString, unzalgoString, unzalgoStringUpMidDown, zalgoDownArray, zalgoMidArray, zalgoUpArray};
+export {
+	addZalgoToChar,
+	addZalgoToString,
+	unzalgoString,
+	unzalgoStringUpMidDown,
+	zalgoDownArray,
+	zalgoMidArray,
+	zalgoUpArray,
+};
