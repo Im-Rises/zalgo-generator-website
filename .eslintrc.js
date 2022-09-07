@@ -26,9 +26,5 @@ module.exports = {
 		'react',
 	],
 	rules: {
-		'eol-last': [
-			'error',
-			'always',
-		],
 	},
 };

@@ -14,21 +14,13 @@
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-scripts": "5.0.1",
-    "typescript": "^4.8.2",
-    "web-vitals": "^2.1.4",
-    "xo": "^0.52.3"
+    "web-vitals": "^2.1.4"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
-  },
-  "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ]
   },
   "browserslist": {
     "production": [
@@ -45,7 +37,10 @@
   "devDependencies": {
     "@typescript-eslint/eslint-plugin": "^5.36.2",
     "@typescript-eslint/parser": "^5.36.2",
+    "eslint": "^8.23.0",
     "eslint-config-xo": "^0.42.0",
-    "eslint-config-xo-typescript": "^0.53.0"
+    "eslint-config-xo-typescript": "^0.53.0",
+    "eslint-plugin-react": "^7.31.7",
+    "typescript": "^4.8.2"
   }
 }
