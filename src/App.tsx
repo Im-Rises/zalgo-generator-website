@@ -6,7 +6,7 @@ import {
 	zalgoMidArray,
 	zalgoUpArray,
 	unzalgoStringUpMidDown,
-} from './zalgo-generator';
+} from './zalgo/zalgo-generator';
 import './App.css';
 
 function App() {
