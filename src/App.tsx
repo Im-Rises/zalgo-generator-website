@@ -11,7 +11,7 @@ import './App.css';
 
 function App() {
 	const zalgoHeight = 1;
-	const zalgoMaxHeight = 20;
+	const zalgoMaxHeight = 50;
 	const textareaRef: RefObject<HTMLTextAreaElement> = React.createRef<HTMLTextAreaElement>();
 	const textareaUnzalgoRef: RefObject<HTMLTextAreaElement> = React.createRef<HTMLTextAreaElement>();
 	const zalgoParagraphRef: RefObject<HTMLParagraphElement> = React.createRef<HTMLParagraphElement>();
