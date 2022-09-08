@@ -60,6 +60,7 @@
 .App-text-area textarea {
   height: 30%;
   width: 80%;
+  resize: none;
 }
 
 .App-zalgo-text {

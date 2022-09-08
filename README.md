@@ -19,18 +19,59 @@ It is programmed in Javascript, TypeScript and React for the web part.
 
 ## Screenshots
 
-Placeholder
+![screenshot](https://user-images.githubusercontent.com/59691442/189004318-aab85d9b-615e-44a9-9d31-cc279fedfe2a.png)
 
 ## Project architecture
-
-Placeholder
 
 You can find the source code in the `main`, `staging`, and `develop` branches. The build website is in the `gh-pages`
 branch.
 
-## Quick Start
-
-Placeholder
+~~~
+zalgo-generator
+├── .github
+|  ├── labeler.yml
+|  ├── release.yml
+|  ├── workflows
+|  |  |── codeql.yml
+|  |  |── dependency-review.yml
+|  |  |── eslint.yml
+|  |  |── greetings.yml
+|  |  |── label.yml
+|  |  |── node.js.yml
+|  |  |── stale.yml
+├── public
+|  ├── reports
+|  |  |── reportWebVitals.json
+|  ├── settings
+|  |  |── react.test.tsx
+|  ├── test
+|  |  |── App.test.tsx
+|  |  |── setupTests.ts
+|  ├── zalgo
+|  |  |── zalgo-generator.ts
+|  ├── reports
+|  ├── settings
+|  ├── test
+|  ├── zalgo
+|  ├── App.scss
+|  ├── App.css
+|  ├── App.tsx
+|  ├── index.css
+|  ├── index.scss
+|  ├── index.tsx
+├── src
+|  ├── 
+├── .editorconfig
+├── .eslintignore
+├── .eslintrc.js
+├── .gitattributes
+├── .gitignore
+├── README.md
+├── package-lock.json
+├── package.json
+├── tsconfig.json
+├── yarn.lock
+~~~
 
 ## Deployment
 

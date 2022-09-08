@@ -54,7 +54,7 @@ function App() {
 					<h2>Text input areas</h2>
 					<textarea ref={textareaRef} maxLength={200}/>
 					<button onClick={doZalgo}>Generate</button>
-					<textarea ref={textareaUnzalgoRef} maxLength={200}/>
+					<textarea ref={textareaUnzalgoRef} maxLength={400}/>
 					<button onClick={undoZalgo}>Delete zalgo</button>
 				</section>
 				<aside className={'App-zalgo-text'}>
