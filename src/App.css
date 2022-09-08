@@ -169,11 +169,11 @@
     width: 100%;
   }
   .App-text-area textarea {
-    height: 50px;
+    height: 100px;
   }
 
   .App-zalgo-text {
-    height: 150px;
+    height: 200px;
     width: 100%;
   }
 
