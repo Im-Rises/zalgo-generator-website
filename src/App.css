@@ -17,11 +17,16 @@
 .App-link {
   border-radius: 4px;
   border-style: solid;
-  color: #61dafb;
-  font-size: 10px;
+  border-width: 2px;
+  color: #A9A9A9;
+  font-size: 9px;
   position: absolute;
   top: 0;
   right: 0;
+  text-align: center;
+}
+.App-link a {
+  color: gray;
 }
 
 .App-section-splitter {
@@ -145,14 +150,31 @@
   margin-bottom: 4%;
 }
 
+@media (min-width: 500px) {
+  .App-link {
+    transition-duration: 1s;
+  }
+}
 @media (max-width: 500px) {
+  .App-link {
+    transform: translateY(-40px);
+    transition-duration: 1s;
+  }
+
   .App-section-splitter {
     height: unset;
   }
 
+  .App-text-area {
+    width: 100%;
+  }
+  .App-text-area textarea {
+    height: 50px;
+  }
+
   .App-zalgo-text {
-    height: 200px;
-    width: 100px;
+    height: 150px;
+    width: 100%;
   }
 
   .App-zalgo-controller {
