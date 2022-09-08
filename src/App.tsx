@@ -11,7 +11,7 @@ import './App.css';
 
 function App() {
 	const zalgoHeight = 1;
-	const zalgoMaxHeight = 20;
+	const zalgoMaxHeight = 50;
 	const textareaRef: RefObject<HTMLTextAreaElement> = React.createRef<HTMLTextAreaElement>();
 	const textareaUnzalgoRef: RefObject<HTMLTextAreaElement> = React.createRef<HTMLTextAreaElement>();
 	const zalgoParagraphRef: RefObject<HTMLParagraphElement> = React.createRef<HTMLParagraphElement>();
@@ -54,7 +54,7 @@ function App() {
 					<h2>Text input areas</h2>
 					<textarea ref={textareaRef} maxLength={200}/>
 					<button onClick={doZalgo}>Generate</button>
-					<textarea ref={textareaUnzalgoRef} maxLength={200}/>
+					<textarea ref={textareaUnzalgoRef} maxLength={400}/>
 					<button onClick={undoZalgo}>Delete zalgo</button>
 				</section>
 				<aside className={'App-zalgo-text'}>
@@ -66,21 +66,25 @@ function App() {
 					</div>
 				</aside>
 			</div>
-			<div>
-				<section className={'App-zalgo-controller'}>
+			<div className={'App-zalgo-controller'}>
+				<h2>Zalgo height controllers</h2>
+				<div className={'controllers-wrapper'}>
 					<div>
-						<input type={'range'} ref={zalgoRangeUpRef} name={'upper-zalgo-range'} min={0} max={zalgoMaxHeight} defaultValue={zalgoHeight}/>
+						<input type={'range'} ref={zalgoRangeUpRef} name={'upper-zalgo-range'} min={0}
+							max={zalgoMaxHeight} defaultValue={zalgoHeight} step={1}/>
 						<label htmlFor={'upper-zalgo-range'}>Upper zalgo height</label>
 					</div>
 					<div>
-						<input type={'range'} ref={zalgoRangeMidRef} name={'middle-zalgo-range'} min={0} max={zalgoMaxHeight} defaultValue={zalgoHeight}/>
+						<input type={'range'} ref={zalgoRangeMidRef} name={'middle-zalgo-range'} min={0}
+							max={zalgoMaxHeight} defaultValue={zalgoHeight} step={1}/>
 						<label htmlFor={'middle-zalgo-range'}>Middle zalgo height</label>
 					</div>
 					<div>
-						<input type={'range'} ref={zalgoRangeDownRef} name={'down-zalgo-range'} min={0} max={zalgoMaxHeight} defaultValue={zalgoHeight}/>
+						<input type={'range'} ref={zalgoRangeDownRef} name={'down-zalgo-range'} min={0}
+							max={zalgoMaxHeight} defaultValue={zalgoHeight} step={1}/>
 						<label htmlFor={'down-zalgo-range'}>Down zalgo height</label>
 					</div>
-				</section>
+				</div>
 			</div>
 		</div>
 	);
