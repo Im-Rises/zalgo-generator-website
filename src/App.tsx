@@ -39,6 +39,15 @@ function App() {
 		}
 	};
 
+	const handleCopy = async (text: string) => {
+		try {
+			await navigator.clipboard.writeText(text);
+			console.log('Text copied to clipboard');
+		} catch (err: unknown) {
+			console.error('Failed to copy text: ', err);
+		}
+	};
+
 	return (
 		<div className='App'>
 			<header className='App-header'>
@@ -52,10 +61,18 @@ function App() {
 			<div className={'App-section-splitter'}>
 				<section className={'App-text-area'}>
 					<h2>Text input areas</h2>
+
 					<textarea ref={textareaRef} maxLength={200}/>
-					<button onClick={doZalgo}>Generate</button>
+					<div>
+						<button onClick={doZalgo}>Generate</button>
+						<button onClick={async () => handleCopy(textareaRef.current!.value)}>Copy</button>
+					</div>
+
 					<textarea ref={textareaUnzalgoRef} maxLength={400}/>
-					<button onClick={undoZalgo}>Delete zalgo</button>
+					<div>
+						<button onClick={undoZalgo}>Delete zalgo</button>
+						<button onClick={async () => handleCopy(textareaUnzalgoRef.current!.value)}>Copy</button>
+					</div>
 				</section>
 				<aside className={'App-zalgo-text'}>
 					<div>
@@ -64,6 +81,7 @@ function App() {
 					<div className={'div-block'}>
 						<p ref={zalgoParagraphRef}/>
 					</div>
+					<button onClick={async () => handleCopy(textareaRef.current!.value)}>Copy</button>
 				</aside>
 			</div>
 			<div className={'App-zalgo-controller'}>

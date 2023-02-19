@@ -22,7 +22,7 @@
   font-size: 9px;
   position: absolute;
   top: 0;
-  right: 0;
+  left: 0;
   text-align: center;
 }
 .App-link a {
@@ -47,18 +47,21 @@
   flex-flow: column;
   align-items: center;
 }
-.App-text-area button {
+.App-text-area div {
   height: 6%;
   width: 80%;
-  margin-bottom: 3%;
+  margin-bottom: 1%;
   margin-top: 1%;
+}
+.App-text-area div button {
+  width: 50%;
   border: solid 4px #d3d3d3;
 }
-.App-text-area button:hover {
+.App-text-area div button:hover {
   background-color: #d3d3d3;
   cursor: pointer;
 }
-.App-text-area button:active {
+.App-text-area div button:active {
   transform: translateY(2px);
   background-color: #61dafb;
 }
@@ -80,7 +83,7 @@
 }
 .App-zalgo-text .div-block {
   display: flex;
-  height: 80%;
+  height: 70%;
   width: 80%;
   color: white;
   background-color: white;
@@ -93,6 +96,12 @@
   width: 100%;
   height: 100%;
   margin: 0 0 0 0;
+}
+.App-zalgo-text button {
+  width: 80%;
+  margin-bottom: 1%;
+  margin-top: 1%;
+  border: solid 4px #d3d3d3;
 }
 
 .App-zalgo-controller {
@@ -160,23 +169,19 @@
     transform: translateY(-40px);
     transition-duration: 1s;
   }
-
   .App-section-splitter {
     height: unset;
   }
-
   .App-text-area {
     width: 100%;
   }
   .App-text-area textarea {
     height: 100px;
   }
-
   .App-zalgo-text {
     height: 200px;
     width: 100%;
   }
-
   .App-zalgo-controller {
     height: unset;
   }

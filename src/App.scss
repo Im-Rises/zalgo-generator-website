@@ -23,7 +23,7 @@
   font-size: 9px;
   position: absolute;
   top: 0;
-  right: 0;
+  left: 0;
   text-align: center;
 
   a {
@@ -49,22 +49,26 @@
   flex-flow: column;
   align-items: center;
 
-  button {
+  div {
     height: 6%;
     width: 80%;
-    margin-bottom: 3%;
+    margin-bottom: 1%;
     margin-top: 1%;
-    border: solid 4px #d3d3d3;
-  }
 
-  button:hover {
-    background-color: #d3d3d3;
-    cursor: pointer;
-  }
+    button {
+      width: 50%;
+      border: solid 4px #d3d3d3;
+    }
 
-  button:active {
-    transform: translateY(2px);
-    background-color: #61dafb;
+    button:hover {
+      background-color: #d3d3d3;
+      cursor: pointer;
+    }
+
+    button:active {
+      transform: translateY(2px);
+      background-color: #61dafb;
+    }
   }
 
   textarea {
@@ -86,7 +90,7 @@
 
   .div-block {
     display: flex;
-    height: 80%;
+    height: 70%;
     width: 80%;
     color: white;
     background-color: white;
@@ -100,6 +104,13 @@
       height: 100%;
       margin: 0 0 0 0;
     }
+  }
+
+  button {
+    width: 80%;
+    margin-bottom: 1%;
+    margin-top: 1%;
+    border: solid 4px #d3d3d3;
   }
 }
 
@@ -163,7 +174,7 @@
   }
 }
 
-@media (min-width: 500px){
+@media (min-width: 500px) {
   .App-link {
     transition-duration: 1s;
   }
@@ -181,6 +192,7 @@
 
   .App-text-area {
     width: 100%;
+
     textarea {
       height: 100px;
     }
