@@ -112,6 +112,16 @@
     margin-top: 1%;
     border: solid 4px #d3d3d3;
   }
+
+  button:hover {
+    background-color: #d3d3d3;
+    cursor: pointer;
+  }
+
+  button:active {
+    transform: translateY(2px);
+    background-color: #61dafb;
+  }
 }
 
 .App-zalgo-controller {
