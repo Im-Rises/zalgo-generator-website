@@ -11,7 +11,7 @@ import './App.scss';
 import GitHubProjectPanel from './components/GitHubProjectPanel';
 import {AUTHOR, GITHUB_URL} from './constants/constant-zalgo-generator';
 
-function App() {
+const App = () => {
 	const zalgoHeight = 1;
 	const zalgoMaxHeight = 50;
 	const textareaRef: RefObject<HTMLTextAreaElement> = React.createRef<HTMLTextAreaElement>();
@@ -105,6 +105,6 @@ function App() {
 			</div>
 		</div>
 	);
-}
+};
 
 export default App;
