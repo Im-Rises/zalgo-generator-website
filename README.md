@@ -1,4 +1,4 @@
-# zalgo-generator
+# zalgo-generator-website
 
 <p align="center">
     <img src="https://img.shields.io/badge/JavaScript-323330?style=for-the-badge&logo=javascript&logoColor=F7DF1E" alt="javascriptLogo" style="height:50px;">
@@ -13,7 +13,7 @@
 This is a website that allows you to create zalgo text from text input.
 
 Click on the following link to go to the website:  
-<https://im-rises.github.io/zalgo-generator/>
+<https://im-rises.github.io/zalgo-generator-website/>
 
 It is programmed in Javascript, TypeScript and React for the web part.
 
@@ -41,10 +41,10 @@ The project is formatted using ESLint and Xo.
 
 ## GitHub Actions
 
-[![pages-build-deployment](https://github.com/Im-Rises/zalgo-generator/actions/workflows/pages/pages-build-deployment/badge.svg)](https://github.com/Im-Rises/zalgo-generator/actions/workflows/pages/pages-build-deployment)
-[![Node.js CI](https://github.com/Im-Rises/zalgo-generator/actions/workflows/node.js.yml/badge.svg?branch=main)](https://github.com/Im-Rises/zalgo-generator/actions/workflows/node.js.yml)
-[![ESLint](https://github.com/Im-Rises/zalgo-generator/actions/workflows/eslint.yml/badge.svg?branch=main)](https://github.com/Im-Rises/zalgo-generator/actions/workflows/eslint.yml)
-[![CodeQL](https://github.com/Im-Rises/zalgo-generator/actions/workflows/codeql.yml/badge.svg?branch=main)](https://github.com/Im-Rises/zalgo-generator/actions/workflows/codeql.yml)
+[![pages-build-deployment](https://github.com/Im-Rises/zalgo-generator-website/actions/workflows/pages/pages-build-deployment/badge.svg)](https://github.com/Im-Rises/zalgo-generator-website/actions/workflows/pages/pages-build-deployment)
+[![Node.js CI](https://github.com/Im-Rises/zalgo-generator-website/actions/workflows/node.js.yml/badge.svg?branch=main)](https://github.com/Im-Rises/zalgo-generator-website/actions/workflows/node.js.yml)
+[![ESLint](https://github.com/Im-Rises/zalgo-generator-website/actions/workflows/eslint.yml/badge.svg?branch=main)](https://github.com/Im-Rises/zalgo-generator-website/actions/workflows/eslint.yml)
+[![CodeQL](https://github.com/Im-Rises/zalgo-generator-website/actions/workflows/codeql.yml/badge.svg?branch=main)](https://github.com/Im-Rises/zalgo-generator-website/actions/workflows/codeql.yml)
 
 The project is set up to run the following actions:
 
@@ -77,4 +77,4 @@ Quentin MOREL :
 - @Im-Rises
 - <https://github.com/Im-Rises>
 
-[![GitHub contributors](https://contrib.rocks/image?repo=Im-Rises/zalgo-generator)](https://github.com/Im-Rises/zalgo-generator/graphs/contributors)
+[![GitHub contributors](https://contrib.rocks/image?repo=Im-Rises/zalgo-generator-website)](https://github.com/Im-Rises/zalgo-generator-website/graphs/contributors)
