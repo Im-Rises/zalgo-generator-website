@@ -1,7 +1,7 @@
 {
   "name": "zalgo-generator",
   "version": "1.0.0",
-  "homepage": "https://im-rises.github.io/zalgo-generator/",
+  "homepage": "https://im-rises.github.io/zalgo-generator-website/",
   "private": false,
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.5",
@@ -14,6 +14,7 @@
     "gh-pages": "^4.0.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "sass": "^1.62.1",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
@@ -39,11 +40,11 @@
   "devDependencies": {
     "@typescript-eslint/eslint-plugin": "^5.36.2",
     "@typescript-eslint/parser": "^5.36.2",
-    "react-scripts": "5.0.1",
     "eslint": "^8.23.0",
     "eslint-config-xo": "^0.42.0",
     "eslint-config-xo-typescript": "^0.53.0",
     "eslint-plugin-react": "^7.31.7",
+    "react-scripts": "5.0.1",
     "typescript": "^4.8.2"
   }
 }

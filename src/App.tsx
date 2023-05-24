@@ -7,7 +7,9 @@ import {
 	zalgoUpArray,
 	unzalgoStringUpMidDown,
 } from './zalgo/zalgo-generator';
-import './App.css';
+import './App.scss';
+import GitHubProjectPanel from './components/GitHubProjectPanel';
+import {AUTHOR, GITHUB_URL} from './constants/constant-zalgo-generator';
 
 function App() {
 	const zalgoHeight = 1;
@@ -51,14 +53,10 @@ function App() {
 	return (
 		<div className='App'>
 			<header className='App-header'>
-				<h1>Zalgo generator</h1>
-				<div className={'App-link'}>
-					<h2>Github project link</h2>
-					<a href={'https://github.com/Im-Rises/zalgo-generator'} target={'_blank'} rel='noreferrer'>
-						<p>Im-Rises/zalgo-generator</p></a>
-				</div>
+				<GitHubProjectPanel link={GITHUB_URL} author={AUTHOR}/>
 			</header>
 			<div className={'App-section-splitter'}>
+				<h1>Zalgo text generator</h1>
 				<section className={'App-text-area'}>
 					<h2>Text input areas</h2>
 
