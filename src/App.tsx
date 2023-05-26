@@ -13,14 +13,13 @@ const App = () => {
 	const minZalgoHeight = 1;
 	const maxZalgoHeight = 25;
 
-	const textareaRef: RefObject<HTMLTextAreaElement> = React.createRef<HTMLTextAreaElement>();
-	const textareaUnzalgoRef: RefObject<HTMLTextAreaElement> = React.createRef<HTMLTextAreaElement>();
+	const textareaRef = React.createRef<HTMLTextAreaElement>();
+	const textareaUnzalgoRef = React.createRef<HTMLTextAreaElement>();
+	const zalgoParagraphRef = React.createRef<HTMLParagraphElement>();
 
-	const zalgoParagraphRef: RefObject<HTMLParagraphElement> = React.createRef<HTMLParagraphElement>();
-
-	const zalgoRangeUpRef: RefObject<HTMLInputElement> = React.createRef<HTMLInputElement>();
-	const zalgoRangeMidRef: RefObject<HTMLInputElement> = React.createRef<HTMLInputElement>();
-	const zalgoRangeDownRef: RefObject<HTMLInputElement> = React.createRef<HTMLInputElement>();
+	const zalgoRangeUpRef = React.createRef<HTMLInputElement>();
+	const zalgoRangeMidRef = React.createRef<HTMLInputElement>();
+	const zalgoRangeDownRef = React.createRef<HTMLInputElement>();
 
 	const doZalgo = () => {
 		const zalgoHeightUp = parseInt(zalgoRangeUpRef.current!.value, 10);
@@ -34,12 +33,11 @@ const App = () => {
 		);
 
 		zalgoParagraphRef.current!.innerHTML = zalgoText;
-		textareaUnzalgoRef.current!.value = unzalgoText(zalgoText);
+		textareaUnzalgoRef.current!.value = zalgoText;
 	};
 
 	const undoZalgo = () => {
-		// zalgoParagraphRef.current!.innerHTML = '';
-		// textareaUnzalgoRef.current!.value = '';
+		zalgoParagraphRef.current!.innerHTML = unzalgoText(textareaUnzalgoRef.current!.value);
 	};
 
 	const handleCopy = async (text: string) => {
@@ -72,7 +70,7 @@ const App = () => {
 					<div className={'div-block'}>
 						<p ref={zalgoParagraphRef}/>
 					</div>
-					<button onClick={async () => handleCopy(textareaRef.current!.value)}>Copy</button>
+					<button onClick={async () => handleCopy(zalgoParagraphRef.current!.innerHTML)}>Copy</button>
 				</aside>
 			</div>
 			<div className={'App-zalgo-controller'}>
