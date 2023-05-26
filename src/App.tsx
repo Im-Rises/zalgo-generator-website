@@ -51,8 +51,8 @@ const App = () => {
 
 	return (
 		<div className='App'>
-			{/* <h1>Zalgo text generator</h1> */}
 			<header className='App-header'>
+				<h1>Zalgo text generator</h1>
 				<GitHubProjectPanel link={GITHUB_URL} author={AUTHOR}/>
 			</header>
 			<div className={'App-section-splitter'}>
