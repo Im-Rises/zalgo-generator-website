@@ -44,15 +44,21 @@
       flex-flow: column;
       align-items: center;
       justify-content: center;
+      place-items: center;
 
-      textarea {
+      .text-area-paragraph {
         height: 80%;
         width: 80%;
-        resize: none;
         text-align: center;
+        background-color: white;
+
+
+        p {
+          color: black;
+        }
       }
 
-      div {
+      .text-area-button {
         height: 20%;
         display: flex;
         flex-flow: row;
