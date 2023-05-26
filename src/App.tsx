@@ -61,7 +61,7 @@ const App = () => {
 					<TextAreaInputOutput textareaRef={textareaRef} actionButtonFunc={doZalgo}
 						handleCopyFunc={handleCopy} actionText={'Generate'}/>
 					<TextAreaInputOutput textareaRef={textareaUnzalgoRef} actionButtonFunc={undoZalgo}
-						handleCopyFunc={handleCopy} actionText={'Delete zalgo'}/>
+						handleCopyFunc={handleCopy} actionText={'Unzalgo'}/>
 				</section>
 				<aside className={'App-zalgo-text'}>
 					<div>
