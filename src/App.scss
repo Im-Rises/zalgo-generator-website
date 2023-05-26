@@ -19,6 +19,7 @@
   display: flex;
   width: 100%;
   height: 70%;
+  flex-flow: row wrap;
 
   .App-text-area {
     width: 50%;
@@ -115,6 +116,20 @@
       }
     }
   }
+
+  @media (max-width: 450px) {
+    height: 60%;
+
+    .App-text-area {
+      width: 100%;
+      height: 60%;
+    }
+
+    .App-zalgo-text {
+      width: 100%;
+      height: 30%;
+    }
+  }
 }
 
 .App-zalgo-controller {
@@ -128,7 +143,7 @@
 
 .controllers-wrapper {
   display: flex;
-  flex-flow: row wrap;
+  //flex-flow: row wrap;
   align-items: center;
   justify-content: center;
   height: 75%;
@@ -136,7 +151,6 @@
 
   div {
     width: 30%;
-    //min-width: 150px;
     min-width: 10rem;
     margin: 0 1% 0 1%;
     display: flex;
@@ -146,9 +160,7 @@
     input {
       -webkit-appearance: none;
       width: 100%;
-      //height: 15px;
       height: 1.5rem;
-      //border-radius: 5px;
       border-radius: 1rem;
       background: #d3d3d3;
       outline: none;
@@ -160,9 +172,7 @@
     input::-webkit-slider-thumb {
       -webkit-appearance: none;
       appearance: none;
-      //width: 20px;
       width: 1rem;
-      //height: 20px;
       height: 1rem;
       border-radius: 50%;
       background: gray;
@@ -170,8 +180,6 @@
     }
 
     input::-moz-range-thumb {
-      //width: 10px;
-      //height: 10px;
       width: 1rem;
       height: 1rem;
       border-radius: 50%;
@@ -184,161 +192,14 @@
       margin-bottom: 4%;
     }
   }
-}
 
-//
-//.App-link {
-//  //border-radius: 4px;
-//  border-radius: 1rem;
-//  border-style: solid;
-//  //border-width: 2px;
-//  border-width: 0.5rem;
-//  color: #A9A9A9;
-//  //font-size: 9px;
-//  font-size: 2rem;
-//  position: absolute;
-//  top: 0;
-//  left: 0;
-//  text-align: center;
-//
-//  a {
-//    color: gray;
-//  }
-//}
-//
-//.App-section-splitter {
-//  display: flex;
-//  flex-flow: row wrap;
-//  align-content: space-between;
-//  justify-content: center;
-//  width: 100%;
-//  height: 60%;
-//  margin-bottom: 2%;
-//}
-//
-//.App-text-area {
-//  height: 100%;
-//  width: 50%;
-//  //min-width: 250px;
-//  min-width: 10rem;
-//  display: flex;
-//  flex-flow: column;
-//  align-items: center;
-//
-//  div {
-//    height: 6%;
-//    width: 80%;
-//    margin-bottom: 1%;
-//    margin-top: 1%;
-//
-//    button {
-//      width: 50%;
-//      border: solid 4px #d3d3d3;
-//    }
-//
-//    button:hover {
-//      background-color: #d3d3d3;
-//      cursor: pointer;
-//    }
-//
-//    button:active {
-//      transform: translateY(2px);
-//      background-color: #61dafb;
-//    }
-//  }
-//
-//  textarea {
-//    height: 30%;
-//    width: 80%;
-//    resize: none;
-//  }
-//}
-//
-//.App-zalgo-text {
-//  //min-width: 250px;
-//  min-width: 20rem;
-//  display: flex;
-//  flex-flow: column;
-//  text-align: center;
-//  align-items: center;
-//  height: 100%;
-//  width: 50%;
-//  color: white;
-//
-//  .div-block {
-//    display: flex;
-//    height: 70%;
-//    width: 80%;
-//    color: white;
-//    background-color: white;
-//
-//    p {
-//      display: flex;
-//      align-items: center;
-//      justify-content: center;
-//      color: black;
-//      width: 100%;
-//      height: 100%;
-//      margin: 0 0 0 0;
-//    }
-//  }
-//
-//  button {
-//    width: 80%;
-//    margin-bottom: 1%;
-//    margin-top: 1%;
-//    border: solid 4px #d3d3d3;
-//  }
-//
-//  button:hover {
-//    background-color: #d3d3d3;
-//    cursor: pointer;
-//  }
-//
-//  button:active {
-//    transform: translateY(2px);
-//    background-color: #61dafb;
-//  }
-//}
-//
-//
-//@media (min-width: 500px) {
-//  .App-link {
-//    transition-duration: 1s;
-//  }
-//}
-//
-//@media (max-width: 500px) {
-//  .App-link {
-//    transform: translateY(-40px);
-//    transition-duration: 1s;
-//  }
-//
-//  .App-section-splitter {
-//    height: unset;
-//  }
-//
-//  .App-text-area {
-//    width: 100%;
-//
-//    textarea {
-//      //height: 100px;
-//      //height: 60px;
-//      height: 6rem;
-//    }
-//  }
-//
-//  .App-zalgo-text {
-//    //height: 150px;
-//    height: 15rem;
-//    width: 100%;
-//
-//    //.div-block {
-//    //  height: 50%;
-//    //}
-//  }
-//
-//  .App-zalgo-controller {
-//    height: unset;
-//  }
-//}
+  @media (max-width: 450px) {
+    flex-flow: wrap;
+
+    div {
+      input {
+        height: 1rem;
+      }
+    }
+  }
+}

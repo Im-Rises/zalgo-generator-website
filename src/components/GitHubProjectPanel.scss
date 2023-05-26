@@ -34,5 +34,18 @@
   &:hover {
     background-color: #A9A9A9;
   }
-}
 
+  @media (max-width: 425px) {
+    //position: relative;
+    //left: 50%;
+    //right: 50%;
+    //transform: translateY(-4.0rem);
+    display: none;
+    //transition: transform 0.5s ease;
+  }
+
+  //&:hover {
+  //  transform: translateY(0);
+  //  transition: transform 0.5s ease;
+  //}
+}
