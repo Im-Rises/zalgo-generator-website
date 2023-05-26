@@ -7,6 +7,10 @@ html, body {
   overflow: hidden;
 
   @media (max-width: 450px) {
-    font-size: 11px;
+    font-size: 12px;
+  }
+
+  @media (max-width: 300px) {
+    font-size: 10px;
   }
 }
