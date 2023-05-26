@@ -1,4 +1,3 @@
-import type {RefObject} from 'react';
 import React from 'react';
 import './App.scss';
 import GitHubProjectPanel from './components/GitHubProjectPanel';
@@ -57,21 +56,26 @@ const App = () => {
 			</header>
 			<div className={'App-section-splitter'}>
 				<section className={'App-text-area'}>
-					<h2>Text input areas</h2>
-					<TextAreaInputOutput textareaRef={textareaRef} actionButtonFunc={doZalgo}
-						handleCopyFunc={handleCopy} actionText={'Generate'}/>
-					<TextAreaInputOutput textareaRef={textareaUnzalgoRef} actionButtonFunc={undoZalgo}
-						handleCopyFunc={handleCopy} actionText={'Unzalgo'}/>
-				</section>
-				<aside className={'App-zalgo-text'}>
+					<span><h2>Text input areas</h2></span>
 					<div>
-						<h2>Real zalgo text output</h2>
+						<TextAreaInputOutput textareaRef={textareaRef} actionButtonFunc={doZalgo}
+							handleCopyFunc={handleCopy} actionText={'Generate'}/>
 					</div>
-					<div className={'div-block'}>
-						<p ref={zalgoParagraphRef}/>
+					<div><TextAreaInputOutput textareaRef={textareaUnzalgoRef} actionButtonFunc={undoZalgo}
+						handleCopyFunc={handleCopy} actionText={'Unzalgo'}/>
 					</div>
-					<button onClick={async () => handleCopy(zalgoParagraphRef.current!.innerHTML)}>Copy</button>
-				</aside>
+				</section>
+				<section className={'App-zalgo-text'}>
+					<span><h2>Real zalgo text output</h2></span>
+					<div className={'align-div-block'}>
+						<div className={'div-text-reat'}>
+							<p ref={zalgoParagraphRef}></p>
+						</div>
+					</div>
+					<div className={'div-button-copy'}>
+						<button onClick={async () => handleCopy(zalgoParagraphRef.current!.innerHTML)}>Copy</button>
+					</div>
+				</section>
 			</div>
 			<div className={'App-zalgo-controller'}>
 				<h2>Zalgo height controllers</h2>
