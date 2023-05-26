@@ -66,11 +66,15 @@ const App = () => {
 					</div>
 				</section>
 				<section className={'App-zalgo-text'}>
-					<h2>Real zalgo text output</h2>
-					<div className={'div-block'}>
-						<p ref={zalgoParagraphRef}/>
+					<span><h2>Real zalgo text output</h2></span>
+					<div className={'align-div-block'}>
+						<div className={'div-text-reat'}>
+							<p ref={zalgoParagraphRef}></p>
+						</div>
 					</div>
-					<button onClick={async () => handleCopy(zalgoParagraphRef.current!.innerHTML)}>Copy</button>
+					<div className={'div-button-copy'}>
+						<button onClick={async () => handleCopy(zalgoParagraphRef.current!.innerHTML)}>Copy</button>
+					</div>
 				</section>
 			</div>
 			<div className={'App-zalgo-controller'}>

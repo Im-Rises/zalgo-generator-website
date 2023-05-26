@@ -48,8 +48,6 @@
         width: 80%;
         resize: none;
         text-align: center;
-        justify-content: center;
-        justify-self: center;
       }
 
       div {
@@ -69,23 +67,54 @@
   .App-zalgo-text {
     width: 50%;
 
-    h2 {
+    span {
+      display: flex;
       height: 10%;
       text-align: center;
       justify-content: center;
+      align-items: center;
+
+      h2 {
+        margin: 0 0 0 0;
+      }
     }
 
-    div {
+    .align-div-block {
+      align-items: center;
+      justify-content: center;
+      width: 100%;
       height: 80%;
-      //width: 80%;
+      display: flex;
+
+      .div-text-reat {
+        height: 80%;
+        width: 80%;
+        align-self: center;
+        color: white;
+        background-color: white;
+
+        p {
+          margin: 0 0 0 0;
+          color: black;
+          text-align: center;
+        }
+      }
     }
 
-    button {
-      height: 10%;
-    }
+    .div-button-copy {
+      height: 8%;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 1% 0 1% 0;
 
+      button {
+        width: 80%;
+        height: 100%;
+      }
+    }
   }
-
 }
 
 .App-zalgo-controller {
