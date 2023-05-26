@@ -10,7 +10,7 @@ type Props = {
 export const TextAreaInputOutput = (props: Props) => (
 	<div className={'text-area-paragraph-holder'}>
 		<div className={'text-area-paragraph'}>
-			<p contentEditable='true' ref={props.paragraphRef}></p>
+			<textarea></textarea>
 		</div>
 		<div className={'text-area-button'}>
 			<button onClick={props.actionButtonFunc}>{props.actionText}</button>
