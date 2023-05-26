@@ -1,4 +1,3 @@
-import type {RefObject} from 'react';
 import React from 'react';
 import './App.scss';
 import GitHubProjectPanel from './components/GitHubProjectPanel';
