@@ -123,11 +123,24 @@
     .App-text-area {
       width: 100%;
       height: 60%;
+
+      div {
+        div {
+          button {
+            height: 90%;
+          }
+        }
+      }
+
     }
 
     .App-zalgo-text {
       width: 100%;
       height: 30%;
+
+      .div-button-copy {
+        height: 20%;
+      }
     }
   }
 }
