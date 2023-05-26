@@ -37,14 +37,15 @@
 
     div {
       height: 45%;
+      width: 100%;
       display: flex;
       flex-flow: column;
       align-items: center;
       justify-content: center;
-      width: 80%;
 
       textarea {
         height: 80%;
+        width: 80%;
         resize: none;
         text-align: center;
         justify-content: center;
@@ -53,8 +54,15 @@
 
       div {
         height: 20%;
-      }
+        display: flex;
+        flex-flow: row;
 
+        button {
+          width: 40%;
+          //border: solid 4px #d3d3d3;
+          height: 75%;
+        }
+      }
     }
   }
 
