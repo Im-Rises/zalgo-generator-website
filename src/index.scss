@@ -5,4 +5,8 @@ html, body {
   height: 100vh;
   font-size: 16px;
   overflow: hidden;
+
+  @media (max-width: 450px) {
+    font-size: 11px;
+  }
 }
