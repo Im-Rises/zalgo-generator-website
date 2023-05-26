@@ -1,23 +1,35 @@
-.text-area-paragraph {
-  height: 80%;
-  width: 80%;
-  text-align: center;
-  background-color: white;
-
-  p {
-    color: black;
-    width: 100%;
-  }
-}
-
-.text-area-button {
-  height: 20%;
+.text-area-paragraph-holder {
+  height: 45%;
+  width: 100%;
   display: flex;
-  flex-flow: row;
+  flex-flow: column;
+  align-items: center;
+  justify-content: center;
+  place-items: center;
 
-  button {
-    width: 40%;
-    //border: solid 4px #d3d3d3;
-    height: 75%;
+  .text-area-paragraph {
+    height: 80%;
+    width: 80%;
+    text-align: center;
+    background-color: white;
+
+
+    p {
+      color: black;
+      width: 100%;
+    }
+  }
+
+  .text-area-button {
+    height: 20%;
+    width: 100%;
+    display: flex;
+    flex-flow: row;
+    justify-content: center;
+
+    button {
+      width: 40%;
+      height: 75%;
+    }
   }
 }

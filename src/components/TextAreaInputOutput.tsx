@@ -8,8 +8,7 @@ type Props = {
 	actionText: string;
 };
 export const TextAreaInputOutput = (props: Props) => (
-	<>
-		{/* <textarea ref={props.textareaRef} maxLength={200}/> */}
+	<div className={'text-area-paragraph-holder'}>
 		<div className={'text-area-paragraph'}>
 			<p contentEditable='true' ref={props.paragraphRef}></p>
 		</div>
@@ -20,5 +19,5 @@ export const TextAreaInputOutput = (props: Props) => (
 			}}>Copy
 			</button>
 		</div>
-	</>
+	</div>
 );

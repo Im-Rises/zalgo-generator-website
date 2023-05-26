@@ -59,13 +59,10 @@ const App = () => {
 			<div className={'App-section-splitter'}>
 				<section className={'App-text-area'}>
 					<span><h2>Text input areas</h2></span>
-					<div>
-						<TextAreaInputOutput paragraphRef={paragraphRef} actionButtonFunc={doZalgo}
-							handleCopyFunc={handleCopy} actionText={'Generate'}/>
-					</div>
-					<div><TextAreaInputOutput paragraphRef={paragraphUnzalgoRef} actionButtonFunc={undoZalgo}
+					<TextAreaInputOutput paragraphRef={paragraphRef} actionButtonFunc={doZalgo}
+						handleCopyFunc={handleCopy} actionText={'Generate'}/>
+					<TextAreaInputOutput paragraphRef={paragraphUnzalgoRef} actionButtonFunc={undoZalgo}
 						handleCopyFunc={handleCopy} actionText={'Unzalgo'}/>
-					</div>
 				</section>
 				<section className={'App-zalgo-text'}>
 					<span><h2>Real zalgo text output</h2></span>
