@@ -40,4 +40,11 @@
     color: white;
     margin-bottom: 4%;
   }
+
+  @media (max-width: 450px) {
+
+    input {
+      height: 1rem;
+    }
+  }
 }
