@@ -1,50 +1,49 @@
 import type {RefObject} from 'react';
 import React from 'react';
-import {
-	addZalgoToString,
-	zalgoDownArray,
-	zalgoMidArray,
-	zalgoUpArray,
-	unzalgoStringUpMidDown,
-} from './zalgo/zalgo-generator';
 import './App.scss';
 import GitHubProjectPanel from './components/GitHubProjectPanel';
 import {AUTHOR, GITHUB_URL} from './constants/constant-zalgo-generator';
+import {zalgoGeneration, unzalgoText} from 'zalgo-generator';
+import {InputRange} from './components/InputRange';
+import {TextAreaInputOutput} from './components/TextAreaInputOutput';
 
 const App = () => {
-	const zalgoHeight = 1;
-	const zalgoMaxHeight = 50;
-	const textareaRef: RefObject<HTMLTextAreaElement> = React.createRef<HTMLTextAreaElement>();
-	const textareaUnzalgoRef: RefObject<HTMLTextAreaElement> = React.createRef<HTMLTextAreaElement>();
-	const zalgoParagraphRef: RefObject<HTMLParagraphElement> = React.createRef<HTMLParagraphElement>();
-	const zalgoRangeUpRef: RefObject<HTMLInputElement> = React.createRef<HTMLInputElement>();
-	const zalgoRangeMidRef: RefObject<HTMLInputElement> = React.createRef<HTMLInputElement>();
-	const zalgoRangeDownRef: RefObject<HTMLInputElement> = React.createRef<HTMLInputElement>();
+	const stepZalgoHeight = 1;
+	const defaultZalgoHeight = 1;
+	const minZalgoHeight = 1;
+	const maxZalgoHeight = 25;
+
+	const textareaRef = React.createRef<HTMLTextAreaElement>();
+	const textareaUnzalgoRef = React.createRef<HTMLTextAreaElement>();
+	const zalgoParagraphRef = React.createRef<HTMLParagraphElement>();
+
+	const zalgoRangeUpRef = React.createRef<HTMLInputElement>();
+	const zalgoRangeMidRef = React.createRef<HTMLInputElement>();
+	const zalgoRangeDownRef = React.createRef<HTMLInputElement>();
 
 	const doZalgo = () => {
-		let textareaBuffer = textareaRef.current?.value;
-		if (textareaBuffer) {
-			textareaBuffer = unzalgoStringUpMidDown(textareaBuffer);
-			textareaBuffer = addZalgoToString(textareaBuffer, parseInt(zalgoRangeUpRef.current!.value, 10), zalgoUpArray);
-			textareaBuffer = addZalgoToString(textareaBuffer, parseInt(zalgoRangeMidRef.current!.value, 10), zalgoMidArray);
-			textareaBuffer = addZalgoToString(textareaBuffer, parseInt(zalgoRangeDownRef.current!.value, 10), zalgoDownArray);
-			textareaRef.current!.value = textareaBuffer;
-			zalgoParagraphRef.current!.innerHTML = textareaBuffer;
-		}
+		const zalgoHeightUp = parseInt(zalgoRangeUpRef.current!.value, 10);
+		const zalgoHeightMid = parseInt(zalgoRangeMidRef.current!.value, 10);
+		const zalgoHeightDown = parseInt(zalgoRangeDownRef.current!.value, 10);
+
+		const zalgoText = zalgoGeneration(textareaRef.current!.value,
+			zalgoHeightUp,
+			zalgoHeightMid,
+			zalgoHeightDown,
+		);
+
+		zalgoParagraphRef.current!.innerHTML = zalgoText;
+		textareaUnzalgoRef.current!.value = zalgoText;
 	};
 
 	const undoZalgo = () => {
-		let textareaBuffer = textareaUnzalgoRef.current?.value;
-		if (textareaBuffer) {
-			textareaBuffer = unzalgoStringUpMidDown(textareaBuffer);
-			textareaUnzalgoRef.current!.value = textareaBuffer;
-		}
+		zalgoParagraphRef.current!.innerHTML = unzalgoText(textareaUnzalgoRef.current!.value);
 	};
 
 	const handleCopy = async (text: string) => {
 		try {
 			await navigator.clipboard.writeText(text);
-			console.log('Text copied to clipboard');
+			console.log('Text copied to clipboard', text);
 		} catch (err: unknown) {
 			console.error('Failed to copy text: ', err);
 		}
@@ -52,26 +51,17 @@ const App = () => {
 
 	return (
 		<div className='App'>
-			{/* <h1>Zalgo text generator</h1> */}
 			<header className='App-header'>
+				<h1>Zalgo text generator</h1>
 				<GitHubProjectPanel link={GITHUB_URL} author={AUTHOR}/>
 			</header>
 			<div className={'App-section-splitter'}>
-
 				<section className={'App-text-area'}>
 					<h2>Text input areas</h2>
-
-					<textarea ref={textareaRef} maxLength={200}/>
-					<div>
-						<button onClick={doZalgo}>Generate</button>
-						<button onClick={async () => handleCopy(textareaRef.current!.value)}>Copy</button>
-					</div>
-
-					<textarea ref={textareaUnzalgoRef} maxLength={400}/>
-					<div>
-						<button onClick={undoZalgo}>Delete zalgo</button>
-						<button onClick={async () => handleCopy(textareaUnzalgoRef.current!.value)}>Copy</button>
-					</div>
+					<TextAreaInputOutput textareaRef={textareaRef} actionButtonFunc={doZalgo}
+						handleCopyFunc={handleCopy} actionText={'Generate'}/>
+					<TextAreaInputOutput textareaRef={textareaUnzalgoRef} actionButtonFunc={undoZalgo}
+						handleCopyFunc={handleCopy} actionText={'Unzalgo'}/>
 				</section>
 				<aside className={'App-zalgo-text'}>
 					<div>
@@ -80,27 +70,18 @@ const App = () => {
 					<div className={'div-block'}>
 						<p ref={zalgoParagraphRef}/>
 					</div>
-					<button onClick={async () => handleCopy(textareaRef.current!.value)}>Copy</button>
+					<button onClick={async () => handleCopy(zalgoParagraphRef.current!.innerHTML)}>Copy</button>
 				</aside>
 			</div>
 			<div className={'App-zalgo-controller'}>
 				<h2>Zalgo height controllers</h2>
 				<div className={'controllers-wrapper'}>
-					<div>
-						<input type={'range'} ref={zalgoRangeUpRef} name={'upper-zalgo-range'} min={0}
-							max={zalgoMaxHeight} defaultValue={zalgoHeight} step={1}/>
-						<label htmlFor={'upper-zalgo-range'}>Upper zalgo height</label>
-					</div>
-					<div>
-						<input type={'range'} ref={zalgoRangeMidRef} name={'middle-zalgo-range'} min={0}
-							max={zalgoMaxHeight} defaultValue={zalgoHeight} step={1}/>
-						<label htmlFor={'middle-zalgo-range'}>Middle zalgo height</label>
-					</div>
-					<div>
-						<input type={'range'} ref={zalgoRangeDownRef} name={'down-zalgo-range'} min={0}
-							max={zalgoMaxHeight} defaultValue={zalgoHeight} step={1}/>
-						<label htmlFor={'down-zalgo-range'}>Down zalgo height</label>
-					</div>
+					<InputRange inputRef={zalgoRangeUpRef} name={'Upper zalgo height: '} min={minZalgoHeight}
+						max={maxZalgoHeight} defaultValue={defaultZalgoHeight} step={stepZalgoHeight}/>
+					<InputRange inputRef={zalgoRangeMidRef} name={'Middle zalgo height: '} min={minZalgoHeight}
+						max={maxZalgoHeight} defaultValue={defaultZalgoHeight} step={stepZalgoHeight}/>
+					<InputRange inputRef={zalgoRangeDownRef} name={'Lower zalgo height: '} min={minZalgoHeight}
+						max={maxZalgoHeight} defaultValue={defaultZalgoHeight} step={stepZalgoHeight}/>
 				</div>
 			</div>
 		</div>

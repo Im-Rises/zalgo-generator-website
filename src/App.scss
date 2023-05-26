@@ -19,6 +19,12 @@
   align-items: center;
   justify-content: center;
   margin-bottom: 2%;
+
+  @media (max-width: 450px) {
+    h1 {
+      display: none;
+    }
+  }
 }
 
 .App-link {
@@ -210,13 +216,18 @@
     width: 100%;
 
     textarea {
-      height: 100px;
+      //height: 100px;
+      height: 60px;
     }
   }
 
   .App-zalgo-text {
-    height: 200px;
+    height: 150px;
     width: 100%;
+
+    //.div-block {
+    //  height: 50%;
+    //}
   }
 
   .App-zalgo-controller {
