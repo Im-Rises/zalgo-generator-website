@@ -1,0 +1,23 @@
+.text-area-paragraph {
+  height: 80%;
+  width: 80%;
+  text-align: center;
+  background-color: white;
+
+  p {
+    color: black;
+    width: 100%;
+  }
+}
+
+.text-area-button {
+  height: 20%;
+  display: flex;
+  flex-flow: row;
+
+  button {
+    width: 40%;
+    //border: solid 4px #d3d3d3;
+    height: 75%;
+  }
+}

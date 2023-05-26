@@ -1,4 +1,5 @@
 import React from 'react';
+import './InputRange.scss';
 
 type Props = {
 	inputRef: React.RefObject<HTMLInputElement>;

@@ -1,4 +1,5 @@
 import React from 'react';
+import './TextAreaInputOutput.scss';
 
 type Props = {
 	paragraphRef: React.RefObject<HTMLParagraphElement>;
