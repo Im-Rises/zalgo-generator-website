@@ -2,7 +2,7 @@
   height: 100vh;
   width: 100vw;
 
-  h1, h2 {
+  h1, h2, p, label {
     color: white;
   }
 }
@@ -22,10 +22,60 @@
 
   .App-text-area {
     width: 50%;
+
+    span {
+      display: flex;
+      height: 10%;
+      text-align: center;
+      justify-content: center;
+      align-items: center;
+
+      h2 {
+        margin: 0 0 0 0;
+      }
+    }
+
+    div {
+      height: 45%;
+      display: flex;
+      flex-flow: column;
+      align-items: center;
+      justify-content: center;
+      width: 80%;
+
+      textarea {
+        height: 80%;
+        resize: none;
+        text-align: center;
+        justify-content: center;
+        justify-self: center;
+      }
+
+      div {
+        height: 20%;
+      }
+
+    }
   }
 
   .App-zalgo-text {
     width: 50%;
+
+    h2 {
+      height: 10%;
+      text-align: center;
+      justify-content: center;
+    }
+
+    div {
+      height: 80%;
+      //width: 80%;
+    }
+
+    button {
+      height: 10%;
+    }
+
   }
 
 }
