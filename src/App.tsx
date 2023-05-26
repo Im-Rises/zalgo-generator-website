@@ -62,7 +62,7 @@ const App = () => {
 					<TextAreaInputOutput textareaRef={textareaUnzalgoRef} actionButtonFunc={undoZalgo}
 						handleCopyFunc={handleCopy} actionText={'Unzalgo'}/>
 				</section>
-				<aside className={'App-zalgo-text'}>
+				<section className={'App-zalgo-text'}>
 					<div>
 						<h2>Real zalgo text output</h2>
 					</div>
@@ -70,7 +70,7 @@ const App = () => {
 						<p ref={zalgoParagraphRef}/>
 					</div>
 					<button onClick={async () => handleCopy(zalgoParagraphRef.current!.innerHTML)}>Copy</button>
-				</aside>
+				</section>
 			</div>
 			<div className={'App-zalgo-controller'}>
 				<h2>Zalgo height controllers</h2>

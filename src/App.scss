@@ -1,43 +1,41 @@
 .App {
-  height: 100%;
-  width: 100%;
+  height: 100vh;
+  width: 100vw;
+
+  h1, h2 {
+    color: white;
+  }
 }
 
 .App-header {
-
+  height: 10%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-flow: row;
 }
 
 .App-section-splitter {
+  display: flex;
+  width: 100%;
+  height: 70%;
+
+  .App-text-area {
+    width: 50%;
+  }
+
+  .App-zalgo-text {
+    width: 50%;
+  }
 
 }
 
 .App-zalgo-controller {
-
+  display: flex;
+  width: 100%;
+  height: 20%;
 }
 
-
-//.App {
-//  height: 100vh;
-//  width: 100vw;
-//
-//  h1, h2 {
-//    color: white;
-//  }
-//}
-//
-//.App-header {
-//  height: 10%;
-//  display: flex;
-//  align-items: center;
-//  justify-content: center;
-//  margin-bottom: 2%;
-//
-//  @media (max-width: 450px) {
-//    h1 {
-//      display: none;
-//    }
-//  }
-//}
 //
 //.App-link {
 //  //border-radius: 4px;
