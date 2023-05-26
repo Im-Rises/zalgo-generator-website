@@ -36,7 +36,9 @@ const App = () => {
 	};
 
 	const undoZalgo = () => {
-		zalgoParagraphRef.current!.innerHTML = unzalgoText(paragraphUnzalgoRef.current!.textContent!);
+		const text = unzalgoText(paragraphUnzalgoRef.current!.textContent!);
+		paragraphRef.current!.textContent = text;
+		zalgoParagraphRef.current!.innerHTML = text;
 	};
 
 	const handleCopy = async (text: string) => {
