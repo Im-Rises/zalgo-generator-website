@@ -22,6 +22,7 @@
     textarea {
       width: 100%;
       height: 100%;
+      padding: 0 0 0 0;
       resize: none;
       border: none;
       outline: none;
@@ -42,6 +43,7 @@
     width: 100%;
     display: flex;
     flex-flow: row;
+    align-items: center;
     justify-content: center;
 
     button {
