@@ -11,10 +11,11 @@ const App = () => {
 	const defaultZalgoHeight = 1;
 	const minZalgoHeight = 1;
 	const maxZalgoHeight = 25;
+	const textMaxLength = 400;
 
 	const paragraphRef = React.createRef<HTMLTextAreaElement>();
 	const paragraphUnzalgoRef = React.createRef<HTMLTextAreaElement>();
-	const zalgoParagraphRef = React.createRef<HTMLParagraphElement>();
+	const zalgoParagraphRef = React.createRef<HTMLTextAreaElement>();
 
 	const zalgoRangeUpRef = React.createRef<HTMLInputElement>();
 	const zalgoRangeMidRef = React.createRef<HTMLInputElement>();
@@ -31,14 +32,14 @@ const App = () => {
 			zalgoHeightDown,
 		);
 
-		zalgoParagraphRef.current!.innerHTML = zalgoText;
+		zalgoParagraphRef.current!.textContent = zalgoText;
 		paragraphUnzalgoRef.current!.textContent = zalgoText;
 	};
 
 	const undoZalgo = () => {
 		const text = unzalgoText(paragraphUnzalgoRef.current!.value);
 		paragraphRef.current!.textContent = text;
-		zalgoParagraphRef.current!.innerHTML = text;
+		zalgoParagraphRef.current!.textContent = text;
 	};
 
 	const handleCopy = async (text: string) => {
@@ -60,19 +61,20 @@ const App = () => {
 				<section className={'App-text-area'}>
 					<span><h2>Text input areas</h2></span>
 					<TextAreaInputOutput textareaRef={paragraphRef} actionButtonFunc={doZalgo}
-						handleCopyFunc={handleCopy} actionText={'Generate'}/>
+						handleCopyFunc={handleCopy} actionText={'Generate'} maxLength={textMaxLength}/>
 					<TextAreaInputOutput textareaRef={paragraphUnzalgoRef} actionButtonFunc={undoZalgo}
-						handleCopyFunc={handleCopy} actionText={'Unzalgo'}/>
+						handleCopyFunc={handleCopy} actionText={'Unzalgo'} maxLength={textMaxLength}/>
 				</section>
 				<section className={'App-zalgo-text'}>
 					<span><h2>Real zalgo text output</h2></span>
 					<div className={'align-div-block'}>
 						<div className={'div-text-reat'}>
-							<p ref={zalgoParagraphRef}></p>
+							{/* <p ref={zalgoParagraphRef}></p> */}
+							<textarea ref={zalgoParagraphRef} readOnly={true}></textarea>
 						</div>
 					</div>
 					<div className={'div-button-copy'}>
-						<button onClick={async () => handleCopy(zalgoParagraphRef.current!.innerHTML)}>Copy</button>
+						<button onClick={async () => handleCopy(zalgoParagraphRef.current!.textContent!)}>Copy</button>
 					</div>
 				</section>
 			</div>
