@@ -105,7 +105,7 @@
   }
 
   @media (max-width: 450px) {
-    height: 60%;
+    height: 70%;
 
     .App-text-area {
       width: 100%;
@@ -139,6 +139,10 @@
   align-items: center;
   justify-content: center;
   flex-flow: column;
+
+  h2 {
+    margin: 0.83rem 0 0 0;
+  }
 }
 
 .controllers-wrapper {
