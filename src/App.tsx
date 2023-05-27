@@ -12,8 +12,8 @@ const App = () => {
 	const minZalgoHeight = 1;
 	const maxZalgoHeight = 25;
 
-	const paragraphRef = React.createRef<HTMLParagraphElement>();
-	const paragraphUnzalgoRef = React.createRef<HTMLParagraphElement>();
+	const paragraphRef = React.createRef<HTMLTextAreaElement>();
+	const paragraphUnzalgoRef = React.createRef<HTMLTextAreaElement>();
 	const zalgoParagraphRef = React.createRef<HTMLParagraphElement>();
 
 	const zalgoRangeUpRef = React.createRef<HTMLInputElement>();
@@ -25,7 +25,7 @@ const App = () => {
 		const zalgoHeightMid = parseInt(zalgoRangeMidRef.current!.value, 10);
 		const zalgoHeightDown = parseInt(zalgoRangeDownRef.current!.value, 10);
 
-		const zalgoText = zalgoGeneration(paragraphRef.current!.textContent!,
+		const zalgoText = zalgoGeneration(paragraphRef.current!.value,
 			zalgoHeightUp,
 			zalgoHeightMid,
 			zalgoHeightDown,
@@ -36,7 +36,7 @@ const App = () => {
 	};
 
 	const undoZalgo = () => {
-		const text = unzalgoText(paragraphUnzalgoRef.current!.textContent!);
+		const text = unzalgoText(paragraphUnzalgoRef.current!.value);
 		paragraphRef.current!.textContent = text;
 		zalgoParagraphRef.current!.innerHTML = text;
 	};
@@ -59,9 +59,9 @@ const App = () => {
 			<div className={'App-section-splitter'}>
 				<section className={'App-text-area'}>
 					<span><h2>Text input areas</h2></span>
-					<TextAreaInputOutput paragraphRef={paragraphRef} actionButtonFunc={doZalgo}
+					<TextAreaInputOutput textareaRef={paragraphRef} actionButtonFunc={doZalgo}
 						handleCopyFunc={handleCopy} actionText={'Generate'}/>
-					<TextAreaInputOutput paragraphRef={paragraphUnzalgoRef} actionButtonFunc={undoZalgo}
+					<TextAreaInputOutput textareaRef={paragraphUnzalgoRef} actionButtonFunc={undoZalgo}
 						handleCopyFunc={handleCopy} actionText={'Unzalgo'}/>
 				</section>
 				<section className={'App-zalgo-text'}>
