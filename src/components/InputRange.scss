@@ -1,0 +1,50 @@
+.div-input-range-holder {
+  width: 30%;
+  min-width: 10rem;
+  margin: 0 1% 0 1%;
+  display: flex;
+  flex-flow: column-reverse;
+  text-align: center;
+
+  input {
+    -webkit-appearance: none;
+    width: 100%;
+    height: 1.5rem;
+    border-radius: 1rem;
+    background: #d3d3d3;
+    outline: none;
+    opacity: 0.7;
+    -webkit-transition: opacity .15s ease-in-out;
+    transition: opacity .15s ease-in-out;
+  }
+
+  input::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 1rem;
+    height: 1rem;
+    border-radius: 50%;
+    background: gray;
+    cursor: pointer;
+  }
+
+  input::-moz-range-thumb {
+    width: 1rem;
+    height: 1rem;
+    border-radius: 50%;
+    background: #04AA6D;
+    cursor: pointer;
+  }
+
+  label {
+    color: white;
+    margin-bottom: 4%;
+  }
+
+  @media (max-width: 450px) {
+
+    input {
+      height: 1rem;
+    }
+  }
+}

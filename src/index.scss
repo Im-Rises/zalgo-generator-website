@@ -5,4 +5,12 @@ html, body {
   height: 100vh;
   font-size: 16px;
   overflow: hidden;
+
+  @media (max-width: 450px) {
+    font-size: 12px;
+  }
+
+  @media (max-width: 400px) {
+    font-size: 8px;
+  }
 }

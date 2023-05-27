@@ -1,4 +1,5 @@
 import React from 'react';
+import './InputRange.scss';
 
 type Props = {
 	inputRef: React.RefObject<HTMLInputElement>;
@@ -12,7 +13,7 @@ type Props = {
 export const InputRange = (props: Props) => {
 	const [inputRangeValue, setInputRangeValue] = React.useState(props.defaultValue);
 	return (
-		<div>
+		<div className={'div-input-range-holder'}>
 			<input type={'range'} ref={props.inputRef} name={'upper-zalgo-range'} min={props.min}
 				max={props.max} defaultValue={props.defaultValue} step={props.step}
 				onChange={e => {

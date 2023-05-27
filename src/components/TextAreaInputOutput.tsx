@@ -1,23 +1,23 @@
 import React from 'react';
+import './TextAreaInputOutput.scss';
 
 type Props = {
-	paragraphRef: React.RefObject<HTMLParagraphElement>;
+	textareaRef: React.RefObject<HTMLTextAreaElement>;
 	actionButtonFunc: () => void;
 	handleCopyFunc: (text: string) => void;
 	actionText: string;
 };
 export const TextAreaInputOutput = (props: Props) => (
-	<>
-		{/* <textarea ref={props.textareaRef} maxLength={200}/> */}
+	<div className={'text-area-paragraph-holder'}>
 		<div className={'text-area-paragraph'}>
-			<p contentEditable='true' ref={props.paragraphRef}></p>
+			<textarea ref={props.textareaRef}></textarea>
 		</div>
 		<div className={'text-area-button'}>
 			<button onClick={props.actionButtonFunc}>{props.actionText}</button>
 			<button onClick={async () => {
-				props.handleCopyFunc(props.paragraphRef.current!.textContent!);
+				props.handleCopyFunc(props.textareaRef.current!.textContent!);
 			}}>Copy
 			</button>
 		</div>
-	</>
+	</div>
 );

@@ -12,8 +12,8 @@ const App = () => {
 	const minZalgoHeight = 1;
 	const maxZalgoHeight = 25;
 
-	const paragraphRef = React.createRef<HTMLParagraphElement>();
-	const paragraphUnzalgoRef = React.createRef<HTMLParagraphElement>();
+	const paragraphRef = React.createRef<HTMLTextAreaElement>();
+	const paragraphUnzalgoRef = React.createRef<HTMLTextAreaElement>();
 	const zalgoParagraphRef = React.createRef<HTMLParagraphElement>();
 
 	const zalgoRangeUpRef = React.createRef<HTMLInputElement>();
@@ -25,7 +25,7 @@ const App = () => {
 		const zalgoHeightMid = parseInt(zalgoRangeMidRef.current!.value, 10);
 		const zalgoHeightDown = parseInt(zalgoRangeDownRef.current!.value, 10);
 
-		const zalgoText = zalgoGeneration(paragraphRef.current!.textContent!,
+		const zalgoText = zalgoGeneration(paragraphRef.current!.value,
 			zalgoHeightUp,
 			zalgoHeightMid,
 			zalgoHeightDown,
@@ -36,7 +36,9 @@ const App = () => {
 	};
 
 	const undoZalgo = () => {
-		zalgoParagraphRef.current!.innerHTML = unzalgoText(paragraphUnzalgoRef.current!.textContent!);
+		const text = unzalgoText(paragraphUnzalgoRef.current!.value);
+		paragraphRef.current!.textContent = text;
+		zalgoParagraphRef.current!.innerHTML = text;
 	};
 
 	const handleCopy = async (text: string) => {
@@ -57,13 +59,10 @@ const App = () => {
 			<div className={'App-section-splitter'}>
 				<section className={'App-text-area'}>
 					<span><h2>Text input areas</h2></span>
-					<div>
-						<TextAreaInputOutput paragraphRef={paragraphRef} actionButtonFunc={doZalgo}
-							handleCopyFunc={handleCopy} actionText={'Generate'}/>
-					</div>
-					<div><TextAreaInputOutput paragraphRef={paragraphUnzalgoRef} actionButtonFunc={undoZalgo}
+					<TextAreaInputOutput textareaRef={paragraphRef} actionButtonFunc={doZalgo}
+						handleCopyFunc={handleCopy} actionText={'Generate'}/>
+					<TextAreaInputOutput textareaRef={paragraphUnzalgoRef} actionButtonFunc={undoZalgo}
 						handleCopyFunc={handleCopy} actionText={'Unzalgo'}/>
-					</div>
 				</section>
 				<section className={'App-zalgo-text'}>
 					<span><h2>Real zalgo text output</h2></span>
