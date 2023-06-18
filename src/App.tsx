@@ -9,7 +9,7 @@ import {TextAreaInputOutput} from './components/TextAreaInputOutput';
 const App = () => {
 	const stepZalgoHeight = 1;
 	const defaultZalgoHeight = 1;
-	const minZalgoHeight = 1;
+	const minZalgoHeight = 0;
 	const maxZalgoHeight = 25;
 	const textMaxLength = 400;
 
