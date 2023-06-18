@@ -9069,7 +9069,7 @@ yocto-queue@^0.1.0:
   resolved "https://registry.npmjs.org/yocto-queue/-/yocto-queue-0.1.0.tgz"
   integrity sha512-rVksvsnNCdJ/ohGc6xgPwyN8eheCxsiLM8mxuE/t/mOVqJewPuO1miLpTHQiRgTKCLexL4MeAFVagts7HmNZ2Q==
 
-zalgo-generator@^1.5.0:
-  version "1.5.0"
-  resolved "https://registry.npmjs.org/zalgo-generator/-/zalgo-generator-1.5.0.tgz#dbd1a03db24a863e4e77be53b5203138e6bc8401"
-  integrity sha512-dHZEjVHJO3LhwqMzSMvOGISZDoHD8p1dIeTU7YW2Tq4eJjyA193FtcZb9S0rDr5jLilCXkL9zYcG1hE1QkDVeg==
+zalgo-generator@^1.5.1:
+  version "1.5.1"
+  resolved "https://registry.npmjs.org/zalgo-generator/-/zalgo-generator-1.5.1.tgz#7e9b7916c8fbec505f9752a2336dd4f4b02c8beb"
+  integrity sha512-gnA903Bki/UD4wAWFCJyJis7rHy7CowfQqKObyCS+YgaktcyABbbIBYZlXOU2X1lKvC76CcVhP8JcLcZA+1YEA==

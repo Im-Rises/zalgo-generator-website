@@ -19,8 +19,7 @@ export const InputRange = (props: Props) => {
 				onChange={e => {
 					setInputRangeValue(parseInt(e.target.value, 10));
 				}}/>
-			<label htmlFor={'upper-zalgo-range'}>Upper zalgo
-                height: {inputRangeValue}</label>
+			<label htmlFor={'upper-zalgo-range'}>{props.name}{inputRangeValue}</label>
 		</div>
 	);
 };
