@@ -14,14 +14,14 @@ This is a website that allows you to create zalgo text from text input.
 
 Click on the following link to go to the website:
 
-## 🚀🚀 [zalgo-generator-website](https://github.com/Im-Rises/zalgo-generator-website) 🚀🚀
+## 🚀🚀 [zalgo-generator-website](https://im-rises.github.io/zalgo-generator-website/) 🚀🚀
 
 It is programmed in Javascript, TypeScript and React for the web part.
 
 This project is a demo of the package
-🚀🚀 [The package is published on npm](https://www.npmjs.com/package/video-stream-ascii) 🚀🚀
+🚀🚀 [The package is published on npm](https://www.npmjs.com/package/zalgo-generator) 🚀🚀
 
-You can find the package source code on 🚀🚀 [GitHub](https://https://github.com/Im-Rises/zalgo-generator).
+You can find the package source code on 🚀🚀 [GitHub](https://github.com/Im-Rises/zalgo-generator).
 
 ## How to use
 
